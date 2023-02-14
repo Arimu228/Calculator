@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/calc_tv"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/first_calc_edit"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/second_calc_edit"
+        app:layout_constraintStart_toEndOf="@+id/second_calc_edit"
+        app:layout_constraintTop_toTopOf="@+id/second_calc_edit" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/second_calc_edit"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/equal_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="@+id/first_calc_edit"
+        app:layout_constraintStart_toEndOf="@+id/first_calc_edit"
+        app:layout_constraintTop_toTopOf="@+id/first_calc_edit" />
+
+    <TextView
+        android:id="@+id/calc_result"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/first_calc_edit"
+        app:layout_constraintStart_toEndOf="@+id/equal_calc"
+        app:layout_constraintTop_toTopOf="@+id/first_calc_edit" />
+
+    <Button
+        android:id="@+id/divide"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="divide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calc_result" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divide" />
+
+    <Button
+        android:id="@+id/btn_calc_minus"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="minus"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add" />
+
+    <Button
+        android:id="@+id/btn_calc_increase"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="increase"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_calc_minus" />
+    <Button
+
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_calc_percent"
+        android:text="percent"
+        app:layout_constraintTop_toBottomOf="@id/btn_calc_increase"
+        app:layout_constraintEnd_toEndOf="@id/btn_calc_increase"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
